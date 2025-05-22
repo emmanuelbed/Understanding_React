@@ -1,7 +1,7 @@
 function TestComponent (){
     return(
         <div>
-            <h2>My Todos</h2>
+            <h1>My Todos</h1>
         </div>
     )
 }
