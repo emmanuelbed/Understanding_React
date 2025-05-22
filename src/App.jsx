@@ -4,12 +4,14 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Todo from './components/Todo'
 import TestComponent from './components/TestComponent'
+import Popup from './components/Popup'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+    <Popup /> 
     <TestComponent />
     <Todo />
     <Todo />
