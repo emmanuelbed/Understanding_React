@@ -8,8 +8,7 @@ function App() {
 
   return (
     <>
-      <h1>Hello React</h1>
-      <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, modi. Nemo dicta, hic laboriosam obcaecati facilis dignissimos minus eaque pariatur in ut doloribus ea temporibus molestias sit similique incidunt voluptatem.</h2>
+    
     </>
   )
 }
