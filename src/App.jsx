@@ -3,13 +3,14 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Todo from './components/Todo'
+import TestComponent from './components/TestComponent'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-    <h1>My Todos</h1>
+    <TestComponent />
     <Todo />
     <Todo />
     <Todo />
