@@ -1,6 +1,6 @@
 import { useState } from "react";
 function Counter() {
-  const [user, setUser] = useState({name: "Emmanuel", age: 28});
+  const [user, setUser] = useState({ name: "Emmanuel", age: 28 });
 
   return (
     <div>
@@ -17,14 +17,20 @@ function Counter() {
       </button>
       <button
         onClick={() => {
-          setCount(count - 1);
+          setUser((prevUser) =>({
+            ...prevUser,
+            age: prevUser.age - 1,
+          }));
         }}
       >
         Decrement
       </button>
       <button
         onClick={() => {
-          setCount(0);
+          setUser((prevUser) => ({
+            ...prevUser,
+            age: 0,
+          }));
         }}
       >
         Reset
