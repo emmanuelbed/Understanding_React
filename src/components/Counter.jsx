@@ -1,13 +1,16 @@
 import { useState } from "react";
 function Counter() {
-  const [count, setCount] = useState(0);
+  const [user, setUser] = useState({name: "Emmanuel", age: 28});
 
   return (
     <div>
-      <h1>Counter: {count}</h1>
+      <h1>Counter: {user.age}</h1>
       <button
         onClick={() => {
-          setCount((prevCount) => prevCount + 1);
+          setUser((prevUser) => ({
+            ...prevUser,
+            age: prevUser.age + 1,
+          }));
         }}
       >
         Increment
