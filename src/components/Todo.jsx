@@ -1,15 +1,14 @@
-function Todo({task, description}){
-    function handleClick(){
-        console.log("Button Clicked")
+function Todo({task}){
+    function deleteHandler(){
+        console.log("Delete", task)
         
     }
     
     return(
         <div className="todo-item">
             <h2>{task}</h2>
-            <p>{description}</p>
             <button onClick={() =>{
-                handleClick()
+                deleteHandler()
             }}>Delete</button>
         </div>
     )

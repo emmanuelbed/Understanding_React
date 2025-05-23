@@ -13,29 +13,32 @@ function App() {
     <>
     
     <TestComponent />
+    <div>
+      <input type="text" onChange={(event) =>{
+        console.log(event.target.value);
+        
+      }}/>
+      <button>Add to do</button>
+    </div>
+
     <Todo 
     task = "Learn React" 
-    description = "Code along and take notes"
     />
 
     <Todo 
     task = "Finish ASAP"
-    description = "6 hours every day"
     />
 
     <Todo 
     task = "Land a job"
-    description = "3 hours every day"
     />
     <Todo 
     task = "Earn 100k"
-    description = "1 hours every day"
     />
     <Todo 
     task = "Land a job"
-    description = "4 hours every day"
     />
-    {/* <Popup  title= "Are you Okay?" />  */}
+    <Popup  title= "Are you Okay?" /> 
     </>
   )
 }
