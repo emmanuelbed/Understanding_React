@@ -11,11 +11,14 @@ function App() {
 
   return (
     <>
-    <Popup /> 
+    
     <TestComponent />
+    <Todo task = "Learn React"/>
+    <Todo task = "Finish ASAP"/>
+    <Todo task = "Land a job"/>
+    <Todo task = "Earn 100k"/>
     <Todo />
-    <Todo />
-    <Todo />
+    {/* <Popup />  */}
     </>
   )
 }

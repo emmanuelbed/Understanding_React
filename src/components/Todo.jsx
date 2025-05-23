@@ -1,7 +1,9 @@
-function Todo(){
+function Todo(props){
+    console.log(props.task);
+    
     return(
         <div className="todo-item">
-            <h2>Finish React Crash Course</h2>
+            <h2>{props.task}</h2>
             <button>Delete</button>
         </div>
     )
