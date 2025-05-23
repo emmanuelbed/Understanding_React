@@ -5,12 +5,17 @@ import "./App.css";
 import Todo from "./components/Todo";
 import TestComponent from "./components/TestComponent";
 import Popup from "./components/Popup";
+import Counter from "./components/Counter";
+
 
 function App() {
-  let popupOpen = false;
+  const [popupOpen, setPopupOpen] = useState(false);
+
+  
 
   return (
     <>
+      <Counter number = {0} />
       <TestComponent />
       <div>
         <input
@@ -19,7 +24,13 @@ function App() {
             console.log(event.target.value);
           }}
         />
-        <button>Add to do</button>
+        <button
+          onClick={() => {
+            setPopupOpen(true);
+          }}
+        >
+          Add to do
+        </button>
       </div>
 
       <Todo task="Learn React" />
