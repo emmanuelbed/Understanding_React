@@ -1,9 +1,10 @@
-function Todo(props){
-    console.log(props.task);
+function Todo({task, description}){
+    console.log(task);
     
     return(
         <div className="todo-item">
-            <h2>{props.task}</h2>
+            <h2>{task}</h2>
+            <p>{description}</p>
             <button>Delete</button>
         </div>
     )

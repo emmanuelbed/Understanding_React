@@ -13,11 +13,28 @@ function App() {
     <>
     
     <TestComponent />
-    <Todo task = "Learn React"/>
-    <Todo task = "Finish ASAP"/>
-    <Todo task = "Land a job"/>
-    <Todo task = "Earn 100k"/>
-    <Todo />
+    <Todo 
+    task = "Learn React" 
+    description = "Code along and take notes"
+    />
+
+    <Todo 
+    task = "Finish ASAP"
+    description = "6 hours every day"
+    />
+
+    <Todo 
+    task = "Land a job"
+    description = "3 hours every day"
+    />
+    <Todo 
+    task = "Earn 100k"
+    description = "1 hours every day"
+    />
+    <Todo 
+    task = "Land a job"
+    description = "4 hours every day"
+    />
     {/* <Popup />  */}
     </>
   )
