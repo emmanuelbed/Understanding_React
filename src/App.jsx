@@ -35,7 +35,7 @@ function App() {
     task = "Land a job"
     description = "4 hours every day"
     />
-    <Popup  title= "Are you Okay?" /> 
+    {/* <Popup  title= "Are you Okay?" />  */}
     </>
   )
 }

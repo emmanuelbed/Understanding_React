@@ -5,7 +5,10 @@ function Todo({task, description}){
         <div className="todo-item">
             <h2>{task}</h2>
             <p>{description}</p>
-            <button>Delete</button>
+            <button onClick={() =>{
+                console.log("Button Clicked");
+                
+            }}>Delete</button>
         </div>
     )
 }
