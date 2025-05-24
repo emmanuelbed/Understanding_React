@@ -1,40 +1,24 @@
 import { useState } from "react";
 function Counter() {
-  const [user, setUser] = useState({ name: "Emmanuel", age: 28 });
-
+  const [array, setArray] = useState([]);
   return (
     <div>
-      <h1>Counter: {user.age}</h1>
+      <h1>Counter: {array.toString()}</h1>
       <button
         onClick={() => {
-          setUser((prevUser) => ({
-            ...prevUser,
-            age: prevUser.age + 1,
-          }));
+          setArray((prevArray) => [...prevArray, "+1"]);
         }}
       >
         Increment
       </button>
       <button
         onClick={() => {
-          setUser((prevUser) =>({
-            ...prevUser,
-            age: prevUser.age - 1,
-          }));
+          setArray((prevArray) => [...prevArray, "-1"]);
         }}
       >
         Decrement
       </button>
-      <button
-        onClick={() => {
-          setUser((prevUser) => ({
-            ...prevUser,
-            age: 0,
-          }));
-        }}
-      >
-        Reset
-      </button>
+      
     </div>
   );
 }
