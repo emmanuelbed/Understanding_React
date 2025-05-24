@@ -29,7 +29,7 @@ function Popup({ title, cancelPopup }) {
           </button>
         </div>
       </div>
-      <div className="backdrop"></div>
+      <div className="backdrop" onClick={cancelClicked}></div>
     </>
   );
 }
