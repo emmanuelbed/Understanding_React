@@ -1,4 +1,4 @@
-function Todo({ task }) {
+function Todo({ task, handleClick }) {
   function deleteHandler() {
     console.log("Delete", task);
   }
@@ -6,13 +6,7 @@ function Todo({ task }) {
   return (
     <div className="todo-item">
       <h2>{task}</h2>
-      <button
-        onClick={() => {
-          deleteHandler();
-        }}
-      >
-        Delete
-      </button>
+      <button onClick={handleClick}>Delete</button>
     </div>
   );
 }

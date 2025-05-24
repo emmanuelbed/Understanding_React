@@ -1,10 +1,10 @@
-function Popup({ title }) {
+function Popup({ title, cancelPopup }) {
   function confirmClicked() {
     console.log("Confirm button clicked");
   }
 
   function cancelClicked() {
-    console.log("Cancel button clicked");
+    cancelPopup()
   }
   return (
     <>
@@ -22,7 +22,7 @@ function Popup({ title }) {
           <button
             className="popup__btn popup__btn--cancel"
             onClick={() => {
-              confirmClicked();
+              cancelClicked();
             }}
           >
             Cancel

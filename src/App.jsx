@@ -7,15 +7,20 @@ import TestComponent from "./components/TestComponent";
 import Popup from "./components/Popup";
 import Counter from "./components/Counter";
 
-
 function App() {
   const [popupOpen, setPopupOpen] = useState(false);
 
-  
+  function handleClick() {
+    setPopupOpen(true);
+    console.log("Parent Notified");
+  }
+
+  function cancelPopup() {
+    setPopupOpen(false);
+  }
 
   return (
     <>
-      <Counter number = {0} />
       <TestComponent />
       <div>
         <input
@@ -33,14 +38,16 @@ function App() {
         </button>
       </div>
 
-      <Todo task="Learn React" />
+      <Todo task="Learn React" handleClick={handleClick} />
 
-      <Todo task="Finish ASAP" />
+      <Todo task="Finish ASAP" handleClick={handleClick} />
 
-      <Todo task="Land a job" />
-      <Todo task="Earn 100k" />
-      <Todo task="Land a job" />
-      {popupOpen ? <Popup title="Are you Okay?" /> : null}
+      <Todo task="Land a job" handleClick={handleClick} />
+      <Todo task="Earn 100k" handleClick={handleClick} />
+      <Todo task="Land a job" handleClick={handleClick} />
+      {popupOpen ? (
+        <Popup cancelPopup={cancelPopup} title="Are you Okay?" />
+      ) : null}
     </>
   );
 }
