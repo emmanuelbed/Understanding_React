@@ -16,7 +16,7 @@ function Home() {
 
   return (
     <div>
-      {users.map((user) => (
+      {users.length > 0 ? users.map((user) => (
         <Link key={user.id} to={`/users/${user.id}`}>
         <User
           
@@ -26,7 +26,8 @@ function Home() {
           username={user.username}
         />
         </Link>
-      ))}
+      )) : <h1>Loading...</h1>
+    }
     </div>
   );
 }
