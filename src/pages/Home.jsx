@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 function Home() {
-    const [users, setUsers] = useState([])
+  const [users, setUsers] = useState([]);
   async function fetchData() {
-    const {data} = await axios.get("https://jsonplaceholder.typicode.com/users");
-    setUsers(data)
-    
+    const { data } = await axios.get(
+      "https://jsonplaceholder.typicode.com/users"
+    );
+    setUsers(data);
   }
   useEffect(() => {
     fetchData();
@@ -13,11 +14,16 @@ function Home() {
 
   return (
     <div>
-  {users.length > 0 ?
-    <h1>{users[0].username}</h1> : <h1>Loading...</h1> 
-}
-</div>
-)
-}
+    {users.map((user) => (
+        <div key={user.id} style={{ border: "1px solid pink" }}>
+      <div>{user?.name}</div>
+      <div>{user?.username}</div>
+      <div>{user?.id}</div>
+      <div>{user?.email}</div>
+    </div>
+))}
+    </div>
+  );
 
-export default Home
+}
+export default Home;
