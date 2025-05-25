@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Posts from "./pages/Posts";
 import Nav from "./components/Nav";
+import Users from "./pages/Users";
 
 function App() {
   return (
@@ -12,10 +13,8 @@ function App() {
       <Nav />
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/about" element={<About />}></Route>
-        <Route path="/contact" element={<Contact />}></Route>
-        <Route path="/posts" element={<Posts />}></Route>
-      </Routes>
+        <Route path="/users/:username" element={<Users/>}></Route>
+        </Routes>
       <div></div>
     </Router>
   );
