@@ -11,7 +11,13 @@ function Home() {
     fetchData();
   }, []);
 
-  return <h1>{users.length > 0 ? users[0].username: null}</h1>;
+  return (
+    <div>
+  {users.length > 0 ?
+    <h1>{users[0].username}</h1> : <h1>Loading...</h1> 
+}
+</div>
+)
 }
 
-export default Home;
+export default Home
